@@ -1,0 +1,25 @@
+# Kebutuhan untuk menjalankan pipeline lokal sekaligus deployment Streamlit.
+#
+# Hal yang wajib diperhatikan saat deploy ke Streamlit Cloud: versi scikit-learn,
+# numpy, dan xgboost harus sama persis dengan versi saat melatih model di laptop.
+# Kalau berbeda, file pkl bisa gagal dimuat atau berperilaku aneh. Samakan juga
+# versi Python di Advanced Settings Streamlit Cloud dengan Python yang dipakai
+# training (di sini Python 3.14). Cek versi dengan: pip show scikit-learn numpy
+#
+# Versi di bawah adalah versi yang dipakai saat model ini dilatih.
+
+scikit-learn==1.8.0
+numpy==2.4.2
+pandas==2.3.3
+xgboost==3.2.0
+joblib>=1.3.0
+
+# Pencatatan eksperimen
+mlflow>=2.9.0
+
+# Plot di notebook eksplorasi
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Deployment web
+streamlit>=1.30.0
